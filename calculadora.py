@@ -1,3 +1,4 @@
+#função operações
 def calculadora(a,b):
     if(operacao == '+'):
         soma = a+b
@@ -9,15 +10,15 @@ def calculadora(a,b):
         multiplicacao = a*b
         print(f'O resultado de {a} x {b} = {multiplicacao}')
     elif(operacao == '/'):
-        if b == 0:
+        try:
+            divisao = a/b
+        except ZeroDivisionError:
             print('Impossível dividir por 0!')
         else:
-            divisao = a/b
             print(f'O resultado de {a} / {b} = {divisao}')
     elif(operacao == '^'):
         potencia = a**b
         print(f'O resultado de {a} ^ {b} = {potencia}')
-
 
 
 if __name__ == '__main__':
@@ -28,6 +29,7 @@ if __name__ == '__main__':
 
     n1 = float(input('Digite o primeiro número: '))
 
+    #loop para verificar se a operação é valida
     while True:
         operacao = (input('Digite a operação desejada (\'+\', \'-\', \'*\', \'/\', \'^\'): '))
         if operacao == '+'or operacao == '-' or operacao == '*' or  operacao == '/' or operacao == '**':
