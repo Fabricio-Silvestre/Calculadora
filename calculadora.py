@@ -22,14 +22,20 @@ def calculadora(a,b):
 
 
 if __name__ == '__main__':
+
     nome = input('Digite seu nome: ')
     print(f'Olá {nome} seja bem vindo calculadora! \n')
+    
+    #verificar se os valores são numéricos
+    while True:
+        try:
+            n1 = float(input('Digite o primeiro número: '))
+            n2 = float(input('Digite o primeiro número: '))
+            break
+        except ValueError:
+            print(f'Erro: Valor digitado não é um número.')
 
-    operacao = None
-
-    n1 = float(input('Digite o primeiro número: '))
-
-    #loop para verificar se a operação é valida
+    #loop para verificar se a operação digitada é valida
     while True:
         operacao = (input('Digite a operação desejada (\'+\', \'-\', \'*\', \'/\', \'^\'): '))
         if operacao == '+'or operacao == '-' or operacao == '*' or  operacao == '/' or operacao == '**':
@@ -37,7 +43,6 @@ if __name__ == '__main__':
 
         print('Operação inválida!\n')
 
-    n2 = float(input('Digite o segundo número: '))
 
     calculadora(n1,n2)
 
