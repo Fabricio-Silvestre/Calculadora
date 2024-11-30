@@ -1,5 +1,8 @@
-#função operações
+
 def calculadora(a,b):
+    '''
+    função onde se realizam as operações matemáticas entre os dois números
+    '''
     if(operacao == '+'):
         soma = a+b
         print(f'O resultado de {a} + {b} = {soma}')
