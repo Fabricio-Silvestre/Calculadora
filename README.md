@@ -1,2 +1,2 @@
 # Calculadora
-Calculadora utilizando os fundamentos do Python
+Calculadora de 2 valores númericos utilizando os fundamentos do Python
