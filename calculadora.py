@@ -41,7 +41,7 @@ if __name__ == '__main__':
     #loop para verificar se a operação digitada é valida
     while True:
         operacao = (input('Digite a operação desejada (\'+\', \'-\', \'*\', \'/\', \'^\'): '))
-        if operacao == '+'or operacao == '-' or operacao == '*' or  operacao == '/' or operacao == '**':
+        if operacao in ['+','-','*','/','**']:
             break
 
         print('Operação inválida!\n')
